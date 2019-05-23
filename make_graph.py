@@ -24,7 +24,6 @@ for x in os.listdir(os.getcwd()):
                 dicts[x.split("_")[len(x.split("_"))-1][:num-1]]=accu_list
 print(dicts)
 ls_10=np.linspace(1,10,num=10)
-sns.set_style("darkgrid")
 fig=plt.figure(figsize=(8,4))
 plt.rcParams.update({"font.size": 13})
 ax=plt.subplot(111)
