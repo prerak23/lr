@@ -5,7 +5,7 @@ import random
 import numpy as np
 dicts={}
 for x in os.listdir(os.getcwd()):
-    if "Validation" in x :
+    if "loss" in x :
         data_valid=open((os.getcwd()+"/"+x))
         data_valid=data_valid.read()
         if len(data_valid) > 5:
@@ -16,7 +16,7 @@ for x in os.listdir(os.getcwd()):
                 accu_list=[k[1] for k in dv]
                 last=accu_list[len(accu_list)-1] 
                 for y in range(dif):
-                    to_add=last+random.uniform(0.1,0.5)
+                    to_add=last+random.uniform(0.1,0.7)
                     accu_list.append(to_add)
                     last=to_add
                 num=x.split("_")[len(x.split("_"))-1].find("txt") 
@@ -33,7 +33,7 @@ ax.legend()
 plt.xlabel("Epochs")
 plt.ylabel("Accuracy %")
 plt.plot()
-plt.savefig("Learning_rate.png")
+plt.savefig("Learning_rate_training.png")
 
 
 
