@@ -3,6 +3,7 @@ import os
 import numpy
 import random
 import numpy as np
+import seaborn as sns
 dicts={}
 for x in os.listdir(os.getcwd()):
     if "loss" in x :
@@ -23,6 +24,7 @@ for x in os.listdir(os.getcwd()):
                 dicts[x.split("_")[len(x.split("_"))-1][:num-1]]=accu_list
 print(dicts)
 ls_10=np.linspace(1,10,num=10)
+sns.set_style("darkgrid")
 fig=plt.figure()
 ax=plt.subplot(111)
 ax.plot(ls_10,dicts['0.1'],'b',label='lr=0.1')
