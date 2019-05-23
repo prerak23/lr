@@ -1,0 +1,19 @@
+import matplotlib as plt
+import os
+import numpy 
+for x in os.listdir(os.getcwd()):
+    if "Validation" in x :
+        dicts={}
+        try :
+            data_valid=open((os.getcwd()+"/"+x))
+            data_valid=data_valid.read()
+            dv=eval(data_valid)
+            if len(dv) < 10 :
+               dif =10-len(dv)
+               accu_list=[k[1] for k in dv]
+               print(accu_list)
+        except:
+            print(x)
+
+
+
