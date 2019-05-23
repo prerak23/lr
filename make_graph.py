@@ -20,10 +20,10 @@ for x in os.listdir(os.getcwd()):
                     accu_list.append(to_add)
                     last=to_add
                 num=x.split("_")[len(x.split("_"))-1].find("txt")
-                accu_list.insert(0,60)
+                
                 dicts[x.split("_")[len(x.split("_"))-1][:num-1]]=accu_list
 
-ls_10=np.linspace(1,11,num=11)
+ls_10=np.linspace(1,10,num=10)
 fig=plt.figure()
 ax=plt.subplot(111)
 ax.plot(ls_10,dicts['0.1'],'b',label='lr=0.1')
