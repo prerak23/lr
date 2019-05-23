@@ -19,10 +19,9 @@ for x in os.listdir(os.getcwd()):
                     to_add=last+random.uniform(0.1,0.5)
                     accu_list.append(to_add)
                     last=to_add
-                num=x.split("_")[len(x.split("_"))-1].find("txt")
-                
+                num=x.split("_")[len(x.split("_"))-1].find("txt") 
                 dicts[x.split("_")[len(x.split("_"))-1][:num-1]]=accu_list
-
+print(dicts)
 ls_10=np.linspace(1,10,num=10)
 fig=plt.figure()
 ax=plt.subplot(111)
