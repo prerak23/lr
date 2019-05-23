@@ -37,7 +37,7 @@ plt.xlabel("Epochs")
 plt.ylabel("Accuracy %")
 plt.tight_layout()
 plt.plot()
-plt.savefig("Learning_rate_2.png")
+plt.savefig("Learning_rate_3.png")
 
 
 
