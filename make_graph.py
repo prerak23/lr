@@ -20,7 +20,7 @@ for x in os.listdir(os.getcwd()):
                     accu_list.append(to_add)
                     last=to_add
                 num=x.split("_")[len(x.split("_"))-1].find("txt")
-                accu_list.insert(0,0.0)
+                accu_list.insert(0,60)
                 dicts[x.split("_")[len(x.split("_"))-1][:num-1]]=accu_list
 
 ls_10=np.linspace(1,11,num=11)
