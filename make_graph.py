@@ -5,6 +5,7 @@ import random
 import numpy as np
 import seaborn as sns
 dicts={}
+'''
 for x in os.listdir(os.getcwd()):
     if "Validation" in x :
         data_valid=open((os.getcwd()+"/"+x))
@@ -23,21 +24,24 @@ for x in os.listdir(os.getcwd()):
                 num=x.split("_")[len(x.split("_"))-1].find("txt") 
                 dicts[x.split("_")[len(x.split("_"))-1][:num-1]]=accu_list
 print(dicts)
-ls_10=np.linspace(1,10,num=10)
+'''
+final_train=eval(open("final_train.txt").read())
+final_Validation=eval(open("final_Validation.txt").read())
+dicts['final_train']=[k[1] for k in final_train]
+dicts['final_valid']=[k[1] for k in final_Validation]
+ls_10=np.linspace(1,30,num=30)
 fig=plt.figure(figsize=(8,4))
 plt.rcParams.update({"font.size": 13})
 ax=plt.subplot(111)
-ax.plot(ls_10,dicts['0.1'],'b',label='lr=0.1')
-ax.plot(ls_10,dicts['0.03'],'g',label='lr=0.02990698')
-ax.plot(ls_10,dicts['0.02'],'r',label='lr=0.02')
-ax.plot(ls_10,dicts['0.07'],'m',label='lr=0.06687403')
+ax.plot(ls_10,dicts['final_valid'],'b',label='Validation set')
+ax.plot(ls_10,dicts['final_train'],'b--',label='Training set')
 ax.legend(fancybox=True, framealpha=.5)
 
 plt.xlabel("Epochs")
 plt.ylabel("Accuracy %")
 plt.tight_layout()
 plt.plot()
-plt.savefig("Learning_rate_3.png")
+plt.savefig("final_1.png")
 
 
 
