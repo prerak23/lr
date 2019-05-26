@@ -33,14 +33,15 @@ ls_10=np.linspace(1,30,num=30)
 fig=plt.figure(figsize=(8,4))
 plt.rcParams.update({"font.size": 13})
 ax=plt.subplot(111)
-ax.plot(ls_10,dicts['final_valid'],'b--',label='Validation set')
+ax.plot(ls_10,dicts['final_valid'],'b--',label='Train set')
+ax.plot(ls_10,dicts['final_train'],'b',label='Validation set')
 ax.legend(fancybox=True, framealpha=.5)
 
 plt.xlabel("Epochs")
 plt.ylabel("Accuracy %")
 plt.tight_layout()
 plt.plot()
-plt.savefig("final_2.png")
+plt.savefig("final_4.png")
 
 
 
