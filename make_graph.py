@@ -40,7 +40,7 @@ plt.xlabel("Epochs")
 plt.ylabel("Accuracy %")
 plt.tight_layout()
 plt.plot()
-plt.savefig("final_1.png")
+plt.savefig("final_2.png")
 
 
 
