@@ -30,7 +30,7 @@ final_Validation=eval(open("final_Validation.txt").read())
 dicts['final_train']=[k[1] for k in final_train]
 dicts['final_valid']=[k[1] for k in final_Validation]
 ls_10=np.linspace(1,30,num=30)
-fig=plt.figure(figsize=(8,4))
+fig=plt.figure(figsize=(4,4))
 plt.rcParams.update({"font.size": 13})
 ax=plt.subplot(111)
 ax.plot(ls_10,dicts['final_valid'],'b--',label='Train set')
@@ -41,7 +41,7 @@ plt.xlabel("Epochs")
 plt.ylabel("Accuracy %")
 plt.tight_layout()
 plt.plot()
-plt.savefig("final_4.png")
+plt.savefig("final_5.png")
 
 
 
